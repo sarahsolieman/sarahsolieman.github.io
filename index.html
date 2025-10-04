@@ -14,6 +14,15 @@
       text-align: center;
       padding: 60px 20px;
     }
+    #terminal-message {
+      font-family: monospace;
+      color: rgb(145, 234, 247);
+      background-color: #000;
+      padding: 1rem;
+      width: fit-content;
+      margin: 2rem auto;
+      border-radius: 6px;
+    }
     header {
       display: flex;
       justify-content: space-between;
@@ -36,7 +45,7 @@
       letter-spacing: 2px;
     }
     .hero {
-      margin-top: 100px;
+      margin-top: 60px;
     }
     h1 {
       font-size: 2.5rem;
@@ -75,7 +84,6 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 14px rgba(0,0,0,0.1);
     }
-
     section {
       max-width: 800px;
       margin: 4rem auto;
@@ -96,253 +104,287 @@
     ul {
       padding-left: 1.2rem;
     }
-
-  .profile-img {
-    display: block;
-    margin: 3rem auto 3rem;
-    width: 380px; /* was 160px */
-    height: 380px; /* was 160px */
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  }
-
-.img2 {
-  display: block;
-  margin: 2rem auto 1rem;
-  width: 380px;
-  height: 380px;
-  object-fit: cover;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    .profile-img {
+      display: block;
+      margin: 3rem auto 3rem;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .img2 {
+      display: block;
+      margin: 2rem auto 1rem;
+      width: 380px;
+      height: 380px;
+      object-fit: cover;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .patent-diagram {
+      display: block;
+      margin: 2rem auto;
+      max-width: 100%;
+      height: auto;
+    }
+    .social-icon {
+      margin: 4rem auto 2rem;
+      text-align: center;
+    }
+    .social-icon img {
+      width: 48px;
+      height: 48px;
+      filter: grayscale(100%) brightness(1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .social-icon img:hover {
+      filter: none;
+      transform: scale(1.1);
+    }
+    .contact-form {
+      max-width: 500px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact-form label {
+      font-weight: 600;
+      color: #444;
+      text-align: left;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.75rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      background-color: #f9f9f9;
+      color: #333;
+      transition: border 0.3s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #000;
+      outline: none;
+    }
+    .contact-form button {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .contact-form button:hover {
+      background: #333;
+      transform: translateY(-2px);
+    }
+    #berkeley-journey {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    #berkeley-journey h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+    .berkeley-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .berkeley-logos img:hover {
+      filter: none;
+      transform: scale(1.05);
+    }
+    .berkeley-text p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+      color: #121111;
+      max-width: 700px;
+    }
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.7;
+  mask-image: radial-gradient(ellipse at center, transparent 60%, black 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, transparent 60%, black 100%);
 }
 
-.patent-diagram {
-  display: block;
-  margin: 2rem auto;
-  max-width: 100%;
-  height: auto;
+
+
+
+.perimeter-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background: rgb(0, 0, 0);
+  mask-image: radial-gradient(circle at center, transparent 60%, black 90.5%);
+  -webkit-mask-image: radial-gradient(circle at center, transparent 60%, black 60.5%);
 }
 
-.social-icon {
-  margin: 4rem auto 2rem;
-  text-align: center;
-}
 
-.social-icon img {
-  width: 48px;
-  height: 48px;
-  filter: grayscale(100%) brightness(1);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
 
-.social-icon img:hover {
-  filter: none;
-  transform: scale(1.1);
-}
 
-.contact-form {
-  max-width: 500px;
-  margin: 2rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-form label {
-  font-weight: 600;
-  color: #444;
-  text-align: left;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.75rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: inherit;
-  background-color: #f9f9f9;
-  color: #333;
-  transition: border 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #000;
-  outline: none;
-}
-
-.contact-form button {
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.contact-form button:hover {
-  background: #333;
-  transform: translateY(-2px);
-}
 
 
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+  <div class="perimeter-gradient"></div>
 
-  <header>
-    <div class="logo">◼ ◼ ▲</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  </script>
+
 
   <section class="hero">
+    <div id="particles-js"></div>
     <h1 style="font-size: 3rem;">Sarah Solieman</h1>
-
     <p class="subtitle">Cybersecurity Data Scientist</p>
-    <div class="buttons">
-      <a href="#projects" class="btn btn-black">View Projects</a>
-      <a href="#contact" class="btn btn-white">Contact Me</a>
-    </div>
+
   </section>
 
   <section id="about">
-<h2 style="font-size: 1.65rem;">Security and AI: because trust issues should be automated</h2>
+    <h2 style="font-size: 1.65rem;">Security and AI: because trust issues should be automated</h2>
     <img src="photo.png" alt="Sarah Solieman headshot" class="profile-img" />
     <p>Senior Data Scientist with 6+ years of experience in security, fraud, and ML operations. I specialize in building ML pipelines, deploying anomaly detection, and working closely with SOC teams to design robust detection systems. I lead projects focused on spam, phishing, and malicious URL classification, owning feature pipelines end-to-end. I bring deep modeling expertise with a healthy skepticism of dashboards that never get used.</p>
   </section>
 
-
-
-<section id="core">
-  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;"></h2>
-  <ul>
-    <li><strong>Security & Fraud Detection:</strong> Phishing, malware, spam, and identity abuse analytics across SMS, email, and web platforms.</li>
-    <li><strong>MLOps & Scalable Pipelines:</strong> Architected full-stack ML systems on AWS (Lambda, SageMaker, API Gateway, etc.) with automated training, deployment, and monitoring.</li>
-    <li><strong>Anomaly & Drift Detection:</strong> Built feature scoring, data drift monitoring, and clustering-based anomaly blockers to catch evolving threats.</li>
-    <li><strong>Trust & Safety Analytics:</strong> Developed models and insights that informed real-time blocking systems and abuse response strategies.</li>
-    <li><strong>Cloud & Tooling:</strong> Python, SQL, Jupyter, Scikit-learn, spaCy, BERT, AWS, GCP</li>
-  </ul>
-</section>
-
-
-<section id="skills" style="padding: 3rem 1rem; background-color: #ffffff;">
-  <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
-    
- <div style="flex: 1 1 250px; text-align: center;">
-  <img src="https://cdn-icons-png.flaticon.com/512/2721/2721291.png" alt="MLOps icon" width="60" height="60" style="transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"/>
-  <h3 style="margin-top: 1rem;">MLOps</h3>
-  <p style="color: #555;">Automated pipelines, scalable ML infra, real-time scoring.</p>
-  <p style="font-size: 0.6rem; color: #080202;">
-    <a href="https://www.flaticon.com/free-icons/machine-learning" title="machine learning icons" style="color: #aaa;" target="_blank" rel="noopener noreferrer">
-     
-    </a>
-  </p>
-</div>
-
-    
-    <div style="flex: 1 1 250px; text-align: center;">
-      <img src="https://cdn-icons-png.flaticon.com/512/7519/7519632.png" alt="Security Detection" width="60" height="60"/>
-      <h3 style="margin-top: 1rem;">Security Detection</h3>
-      <p style="color: #555;">Threat modeling, anomaly detection, phishing & fraud intel.</p>
+  <section id="berkeley-journey" style="max-width: 800px; margin: 4rem auto; text-align: left; padding: 0 20px;">
+    <hr style="border: none; height: 1px; background-color: #ddd; width: 60%; margin: 2rem auto;" />
+    <div class="berkeley-logos" style="display: flex; justify-content: center; margin-bottom: 2rem;">
+      <img src="uc-berkeley-logo.png" alt="UC Berkeley" style="max-height: 270px; object-fit: contain; filter: grayscale(20%); transition: filter 0.3s ease, transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
     </div>
-
-    <div style="flex: 1 1 250px; text-align: center;">
-      <img src="https://cdn-icons-png.flaticon.com/512/865/865021.png" alt="Analytics" width="60" height="60"/>
-      <h3 style="margin-top: 1rem;">Data Analytics</h3>
-      <p style="color: #555;">Insightful dashboards and metric deep dives.</p>
+    <div id="about">
+      <p>I studied Data Science and Political Science at UC Berkeley—fully convinced I was destined for courtrooms and closing arguments. Then I was intrigued by how AI could drive social good. Somewhere between ethics debates and building my first model, I realized I’d rather build the system than argue about it.</p>
+      <p>I founded the <strong>Innovation Working Group</strong>—uniting engineers, data scientists, and policy minds to tackle bot detection and social media influence.  Our findings informed academic research and platform risk discussions around coordinated manipulation.</p>
     </div>
+  </section>
 
-  </div>
-</section>
+  <section id="core">
+    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;"></h2>
+    <ul>
+      <li><strong>Security & Fraud Detection:</strong> Phishing, malware, spam, and identity abuse analytics across SMS, email, and web platforms.</li>
+      <li><strong>MLOps & Scalable Pipelines:</strong> Architected full-stack ML systems on AWS (Lambda, SageMaker, API Gateway, etc.) with automated training, deployment, and monitoring.</li>
+      <li><strong>Anomaly & Drift Detection:</strong> Built feature scoring, data drift monitoring, and clustering-based anomaly blockers to catch evolving threats.</li>
+      <li><strong>Trust & Safety Analytics:</strong> Developed models and insights that informed real-time blocking systems and abuse response strategies.</li>
+      <li><strong>Cloud & Tooling:</strong> Python, SQL, Jupyter, Scikit-learn, spaCy, BERT, AWS, GCP</li>
+    </ul>
+  </section>
 
-
+  <section id="skills" style="padding: 3rem 1rem; background-color: #ffffff;">
+    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+      <div style="flex: 1 1 250px; text-align: center;">
+        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721291.png" alt="MLOps icon" width="60" height="60" style="transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"/>
+        <h3 style="margin-top: 1rem;">MLOps</h3>
+        <p style="color: #555;">Automated pipelines, scalable ML infra, real-time scoring.</p>
+        <p style="font-size: 0.6rem; color: #080202;">
+          <a href="https://www.flaticon.com/free-icons/machine-learning" title="machine learning icons" style="color: #aaa;" target="_blank" rel="noopener noreferrer"></a>
+        </p>
+      </div>
+      <div style="flex: 1 1 250px; text-align: center;">
+        <img src="https://cdn-icons-png.flaticon.com/512/7519/7519632.png" alt="Security Detection" width="60" height="60"/>
+        <h3 style="margin-top: 1rem;">Security Detection</h3>
+        <p style="color: #555;">Threat modeling, anomaly detection, phishing & fraud intel.</p>
+      </div>
+      <div style="flex: 1 1 250px; text-align: center;">
+        <img src="https://cdn-icons-png.flaticon.com/512/865/865021.png" alt="Analytics" width="60" height="60"/>
+        <h3 style="margin-top: 1rem;">Data Analytics</h3>
+        <p style="color: #555;">Insightful dashboards and metric deep dives.</p>
+      </div>
+    </div>
+  </section>
 
   <section id="patent">
-  <h2>Patent</h2>
-
-  <p>
-    <strong>
+    <h2>Patent</h2>
+    <p>
+      <strong>
+        <a href="https://patents.google.com/patent/US20250080580A1/en?oq=20250080580+" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           style="color:#000; text-decoration:none;">
+           US 20250080580 A1 — Intelligent URL Risk Scoring System
+        </a>
+      </strong>
+    </p>
+    <p>
+      Designed a machine learning system to classify potentially malicious URLs 
+      using enriched signals—like crawl behavior, redirect flow, and IP/network 
+      patterns. Instead of static string matching, it scores risk based on how 
+      URLs behave in the wild, enabling early detection of phishing, drive-by 
+      downloads, and spoofed domains.
+    </p>
+    <p>
+      This system came from realizing that rigid, one‑shot rules at SMS‑scale are 
+      like playing whack‑a‑mole blindfolded. Instead, I built a pipeline that 
+      doesn’t rely on easily spoofed content but on crawl behavior, redirect chains 
+      and network‑level signals. The result: a scalable, ML‑driven classifier that 
+      flags emerging malicious URLs in real time—no manual chasing required.
+    </p>
+    <img src="image4.png" 
+         alt="URL Risk Scoring System Architecture Diagram" 
+         class="patent-diagram" />
+    <div style="text-align:center; margin-top:1rem;">
       <a href="https://patents.google.com/patent/US20250080580A1/en?oq=20250080580+" 
          target="_blank" 
          rel="noopener noreferrer" 
-         style="color:#000; text-decoration:none;">
-         US 20250080580 A1 — Intelligent URL Risk Scoring System
+         style="display:inline-block; background:#ffffff; color:#000430; 
+                padding:0.6rem 1.2rem; border-radius:25px; text-decoration:none; 
+                font-weight:600; transition:all 0.2s ease;">
+        View Full Patent
       </a>
-    </strong>
-  </p>
+    </div>
+  </section>
 
-  <p>
-    Designed a machine learning system to classify potentially malicious URLs 
-    using enriched signals—like crawl behavior, redirect flow, and IP/network 
-    patterns. Instead of static string matching, it scores risk based on how 
-    URLs behave in the wild, enabling early detection of phishing, drive-by 
-    downloads, and spoofed domains.
-  </p>
+  <hr style="border: none; height: 1px; background-color: #ddd; width: 60%; margin: 2rem auto;" />
+  <div style="text-align: center; font-style: italic; color: #04104a; margin: 3rem auto 1rem; font-size: 0.95rem; white-space: nowrap; overflow-x: auto;">
+    This page was built with 5 lines of logic and 500 lines of “why is this off by 2px?"
+  </div>
 
-  <p>
-    This system came from realizing that rigid, one‑shot rules at SMS‑scale are 
-    like playing whack‑a‑mole blindfolded. Instead, I built a pipeline that 
-    doesn’t rely on easily spoofed content but on crawl behavior, redirect chains 
-    and network‑level signals. The result: a scalable, ML‑driven classifier that 
-    flags emerging malicious URLs in real time—no manual chasing required.
-  </p>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="https://formspree.io/f/mjkarndz" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="_replyto" required />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-  <img src="image4.png" 
-       alt="URL Risk Scoring System Architecture Diagram" 
-       class="patent-diagram" />
-
-  <div style="text-align:center; margin-top:1rem;">
-    <a href="https://patents.google.com/patent/US20250080580A1/en?oq=20250080580+" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       style="display:inline-block; background:#ffffff; color:#000430; 
-              padding:0.6rem 1.2rem; border-radius:25px; text-decoration:none; 
-              font-weight:600; transition:all 0.2s ease;">
-      View Full Patent
+  <div class="social-icon">
+    <a href="https://www.linkedin.com/in/sarahsolieman" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
     </a>
   </div>
-</section>
 
-<hr style="border: none; height: 1px; background-color: #ddd; width: 60%; margin: 2rem auto;" />
-<div style="text-align: center; font-style: italic; color: #04104a; margin: 3rem auto 1rem; font-size: 0.95rem; white-space: nowrap; overflow-x: auto;">
-  This page was built with 5 lines of logic and 500 lines of “why is this off by 2px?"
-</div>
-
-
-
-<section id="contact">
-  <h2>Contact Me</h2>
-  <form class="contact-form" action="https://formspree.io/f/mjkarndz"" method="POST">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required />
-
-    <label for="email">Email</label>
-    <input type="email" id="email" name="_replyto" required />
-
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-
-
-<div class="social-icon">
-  <a href="https://www.linkedin.com/in/sarahsolieman" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
-  </a>
-</div>
-
-
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    particlesJS.load('particles-js', 'particles.json', function () {
+      console.log('particles.js loaded');
+    });
+  });
+</script>
 </body>
-</html>
