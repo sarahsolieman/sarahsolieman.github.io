@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sarah Solieman — AI & Security</title>
+  <meta name="description" content="Portfolio of Sarah Solieman — Data Scientist in Security, Fraud, and Trust & Safety." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #000000;
+      --text-light: #e0e8f5;
+      --accent: #67d4ff;
+      --accent2: #ff5edc;
+      --card-bg: #121212;
+      --shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body, html {
+      height: 100%;
+      overflow-x: hidden;
+      font-family: Inter, sans-serif;
+      color: var(--text-light);
+      background: var(--bg-dark);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      position: fixed; top:0; left:0; width:100%;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem; z-index: 100;
+      background: rgba(0,0,0, 0.5);
+      backdrop-filter: blur(6px);
+    }
+    header .logo { font-weight: 800; font-size: 1.3rem; }
+    header nav a { margin-left: 1.5rem; font-weight: 500; color: #a0b0cc; }
+    header nav a:hover { color: #fff; }
+    .hero {
+      height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #a0b0cc;
+    }
+    .hero .btn {
+      padding: 0.8rem 1.6rem;
+      background: var(--accent);
+      color: #000;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .hero .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.7);
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.8rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, background 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      background: #1f1f1f;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #8a9bb3;
+      font-size: 0.9rem;
+    }
+    #bg-canvas {
+      position: fixed; top:0; left:0;
+      width:100vw; height:100vh;
+      z-index: 1;
+      pointer-events: none;
+      background: black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <header>
+    <div class="logo">Sarah Solieman</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#patent">Patent</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Security meets AI in my world</h1>
+    <p>Building systems to detect fraud, abuse & anomalous behavior with rigorous ML + intuition.</p>
+    <a class="btn" href="#projects">See My Work</a>
+  </div>
+
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>6+ years in cybersecurity, ML pipelines, and SOC tooling. Formerly Proofpoint. Feature engineering and analyst empathy are my bread & butter.</p>
+      <img src="photo.png" alt="Sarah Solieman" style="width:200px; border-radius: 12px; margin-top: 1rem; box-shadow: 0 4px 20px rgba(255,255,255,0.1);" />
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="card">
+      <h2>Highlighted Projects</h2>
+      <ul>
+        <li><strong>Malicious URL Classifier</strong> — lexical + host features, ~35% analyst work reduction.</li>
+        <li><strong>Credential Stuffing Detector</strong> — layered anomaly + supervised scoring.</li>
+        <li><strong>Bot Graph Signals</strong> — coordinated spam clusters via graph embeddings.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="patent">
+    <div class="card">
+      <h2>Patent & Resume Highlights</h2>
+      <p><strong>Patent:</strong> US20230319106A1 — Malicious URL Classification System. Flags suspicious URLs in real-time using ensemble logic, domain heuristics, and ML routing logic.</p>
+      <h3>Resume Highlights</h3>
+      <ul>
+        <li><strong>Title:</strong> Senior Data Scientist — Specializing in Security, Fraud, and Trust & Safety.</li>
+        <li><strong>Experience:</strong> Proofpoint, Quillbot, Aura, University of California, Berkeley.</li>
+        <li><strong>Core Skills:</strong> Anomaly detection, supervised pipelines, MLOps, SOC integration, product experimentation, fraud risk strategy.</li>
+        <li><strong>Technical Stack:</strong> Python, SQL, AWS (Lambda, Step Functions), Airflow, Snowflake, GitHub Actions.</li>
+        <li><strong>Education:</strong> University of California, Berkeley — Data Science.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:sarahsolieman@berkeley.edu">sarahsolieman@berkeley.edu</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/sarahsolieman" target="_blank">linkedin.com/in/sarahsolieman</a></p>
+      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Sarah Solieman
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+    const numStars = 300;
+
+    function initCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      stars = [];
+      for (let i = 0; i < numStars; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 1.5 + 0.5,
+          vy: Math.random() * 0.6 + 0.3,
+          color: 'rgba(255, 235, 180, 0.95)',
+          glow: 16
+        });
+      }
+    }
+
+    function animate() {
+      ctx.fillStyle = 'black';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const gradient = ctx.createRadialGradient(
+        canvas.width / 2,
+        canvas.height / 2,
+        200,
+        canvas.width / 2,
+        canvas.height / 2,
+        700
+      );
+      gradient.addColorStop(0, 'rgba(80,20,120,0.12)');
+      gradient.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      for (let s of stars) {
+        s.y += s.vy;
+        if (s.y > canvas.height) {
+          s.y = 0;
+          s.x = Math.random() * canvas.width;
+        }
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = s.color;
+        ctx.shadowColor = s.color;
+        ctx.shadowBlur = s.glow;
+        ctx.fill();
+      }
+      requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', initCanvas);
+    initCanvas();
+    animate();
+  </script>
+</body>
+</html>
