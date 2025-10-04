@@ -246,12 +246,39 @@
 
 
 
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #0f0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  font-size: 1.5rem;
+  transition: opacity 1s ease;
+}
+
+.terminal-box {
+  text-align: center;
+}
 
 
   </style>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+
+  <div id="splash-screen">
+  <div class="terminal-box">
+    <p id="terminal-text"></p>
+  </div>
+</div>
+
   <div class="perimeter-gradient"></div>
 
   </script>
@@ -387,4 +414,30 @@
     });
   });
 </script>
+
+<script>
+  const message = "Access granted... Loading portfolio";
+  const terminalText = document.getElementById("terminal-text");
+  let index = 0;
+
+  function typeMessage() {
+    if (index < message.length) {
+      terminalText.textContent += message.charAt(index);
+      index++;
+      setTimeout(typeMessage, 60);
+    } else {
+      setTimeout(() => {
+        document.getElementById("splash-screen").style.opacity = 0;
+        setTimeout(() => {
+          document.getElementById("splash-screen").style.display = "none";
+        }, 1000);
+      }, 1000);
+    }
+  }
+
+  window.addEventListener("load", () => {
+    typeMessage();
+  });
+</script>
+
 </body>
