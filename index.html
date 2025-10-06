@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
 <script>
@@ -254,9 +254,6 @@
   -webkit-mask-image: radial-gradient(circle at center, transparent 60%, black 60.5%);
 }
 
-
-
-
 #splash-screen {
   position: fixed;
   top: 0;
@@ -303,14 +300,14 @@
 
   <section id="about">
     <h2 style="font-size: 1.65rem;">Security and AI: because trust issues should be automated</h2>
-    <img src="photo.png" alt="Sarah Solieman headshot" class="profile-img" />
+    <img src="images/photo.png" alt="Sarah Solieman headshot" class="profile-img" />
     <p>Senior Data Scientist with 6+ years of experience in security, fraud, and ML operations. I specialize in building ML pipelines, deploying anomaly detection, and working closely with SOC teams to design robust detection systems. I lead projects focused on spam, phishing, and malicious URL classification, owning feature pipelines end-to-end. I bring deep modeling expertise with a healthy skepticism of dashboards that never get used.</p>
   </section>
 
   <section id="berkeley-journey" style="max-width: 800px; margin: 4rem auto; text-align: left; padding: 0 20px;">
     <hr style="border: none; height: 1px; background-color: #ddd; width: 60%; margin: 2rem auto;" />
     <div class="berkeley-logos" style="display: flex; justify-content: center; margin-bottom: 2rem;">
-      <img src="uc-berkeley-logo.png" alt="UC Berkeley" style="max-height: 270px; object-fit: contain; filter: grayscale(20%); transition: filter 0.3s ease, transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <img src="images/uc-berkeley-logo.png" alt="UC Berkeley" style="max-height: 270px; object-fit: contain; filter: grayscale(20%); transition: filter 0.3s ease, transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
     </div>
     <div id="about">
       <p>I studied Data Science and Political Science at UC Berkeley—fully convinced I was destined for courtrooms and closing arguments. Then I was intrigued by how AI could drive social good. Somewhere between ethics debates and building my first model, I realized I’d rather build the system than argue about it.</p>
@@ -378,7 +375,7 @@
       and network‑level signals. The result: a scalable, ML‑driven classifier that 
       flags emerging malicious URLs in real time—no manual chasing required.
     </p>
-    <img src="image4.png" 
+    <img src="images/image4.png" 
          alt="URL Risk Scoring System Architecture Diagram" 
          class="patent-diagram" />
     <div style="text-align:center; margin-top:1rem;">
@@ -392,6 +389,40 @@
       </a>
     </div>
   </section>
+
+  <section id="projects">
+  <h2>Projects</h2>
+
+   <img src="images/neurosoc_arch.png" 
+     alt="NeuroSOC architecture diagram"
+     style="display:block; margin:1.5rem auto; max-width:600px; width:90%; height:auto; box-shadow:0 4px 14px rgba(0,0,0,0.1); border-radius:8px;" />
+  <div style="margin-bottom: 3rem;">
+          <strong>NeuroSOC</strong> is an experimental platform I designed to explore how AI can automate key parts of Security Operations workflows.
+      It uses a Retrieval-Augmented Generation (RAG) pipeline to interpret logs, retrieve relevant playbooks, and summarize potential incidents, 
+      helping analysts respond faster and with clearer context.
+    </p>
+        <p style="color:#333; font-size:1rem; line-height:1.6;">
+      Built with <strong>Python, Streamlit, FAISS</strong>, and <strong>OpenAI’s API</strong>, the system demonstrates how 
+      <em>machine learning and automation can reduce alert fatigue</em> and bring structure to unstructured threat data.
+    </p>
+
+    <img src="images/neurosoc.png" 
+     alt="NeuroSOC architecture diagram"
+     style="display:block; margin:1.5rem auto; max-width:600px; width:90%; height:auto; box-shadow:0 4px 14px rgba(0,0,0,0.1); border-radius:8px;" />
+    <p style="color:#333; font-size:1rem; line-height:1.6;"> 
+
+    <div style="text-align:center; margin-top:1.5rem;">
+      <a href="#" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         style="display:inline-block; background:#000; color:#fff; 
+                padding:0.7rem 1.4rem; border-radius:25px; text-decoration:none; 
+                font-weight:600; transition:all 0.2s ease;">
+        View Demo (Coming Soon)
+      </a>
+    </div>
+  </div>
+</section>
 
   <hr style="border: none; height: 1px; background-color: #ddd; width: 60%; margin: 2rem auto;" />
   <div style="text-align: center; font-style: italic; color: #04104a; margin: 3rem auto 1rem; font-size: 0.95rem; white-space: nowrap; overflow-x: auto;">
