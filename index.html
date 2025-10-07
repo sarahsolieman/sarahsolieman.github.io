@@ -241,17 +241,47 @@
 
 
 
+:root {
+  /* Default ratio for white area (tweak this base as needed) */
+  --white-core: 80%;
+}
+
+/* Automatically widen the white center on smaller screens */
+@media (max-width: 768px) {
+  :root {
+    --white-core: 90%;
+  }
+}
+
+/* Slightly reduce on ultra-wide monitors */
+@media (min-width: 1600px) {
+  :root {
+    --white-core: 70%;
+  }
+}
+
 .perimeter-gradient {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   pointer-events: none;
   z-index: -1;
-  background: rgb(0, 0, 0);
-  mask-image: radial-gradient(circle at center, transparent 60%, black 90.5%);
-  -webkit-mask-image: radial-gradient(circle at center, transparent 60%, black 60.5%);
+
+  /* Adaptive gradient using CSS variable */
+  background: radial-gradient(
+    closest-side,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) var(--white-core),
+    rgba(0, 0, 0, 1) 100%
+  );
+
+  /* Keep rectangular shape */
+  mask-image: linear-gradient(black, black);
+  -webkit-mask-image: linear-gradient(black, black);
+
+  transition: background 0.5s ease;
 }
 
 #splash-screen {
@@ -270,6 +300,8 @@
   font-size: 1.5rem;
   transition: opacity 1s ease;
 }
+
+
 
 .terminal-box {
   text-align: center;
@@ -406,7 +438,7 @@
       <em>machine learning and automation can reduce alert fatigue</em> and bring structure to unstructured threat data.
     </p>
 
-    <img src="images/neurosoc.png" 
+    <img src="images/neuroimage.png" 
      alt="NeuroSOC architecture diagram"
      style="display:block; margin:1.5rem auto; max-width:600px; width:90%; height:auto; box-shadow:0 4px 14px rgba(0,0,0,0.1); border-radius:8px;" />
     <p style="color:#333; font-size:1rem; line-height:1.6;"> 
